@@ -48,7 +48,7 @@ module.exports = {
       options: {
         name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
         short_name: `minimal-blog`,
-        description: `Software engineer writing accessible tutorials for devs`,
+        description: `Software engineer writing accessible tutorials for devs.`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#6B46C1`,
