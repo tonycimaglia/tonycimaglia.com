@@ -29,10 +29,10 @@ module.exports = {
             name: `Twitter`,
             url: `https://twitter.com/tonycimaglia`,
           },
-          // {
-          //   name: `Github`,
-          //   url: `https://www.instagram.com/lekoarts.de/`,
-          // },
+          {
+            name: `Github`,
+            url: `https://github.com/tonycimaglia`,
+          },
         ],
       },
     },
