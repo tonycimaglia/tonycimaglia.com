@@ -9,6 +9,7 @@ module.exports = {
     siteTitle: `Tony Cimaglia`,
     siteTitleAlt: `Tony Cimaglia`,
     image: `/banner.jpg`,
+    siteImage: `/banner.jpg`,
     siteUrl: `https://www.tonycimaglia.com/`,
   },
   plugins: [
