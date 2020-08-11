@@ -8,7 +8,8 @@ module.exports = {
   siteMetadata: {
     siteTitle: `Tony Cimaglia`,
     siteTitleAlt: `Tony Cimaglia`,
-    siteImage: `/banner.jpg`,
+    image: `/banner.jpg`,
+    siteUrl: `https://www.tonycimaglia.com/`,
   },
   plugins: [
     {
