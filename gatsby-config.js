@@ -32,10 +32,10 @@ module.exports = {
             name: `Twitter`,
             url: `https://twitter.com/tonycimaglia`,
           },
-          {
-            name: `Github`,
-            url: `https://github.com/tonycimaglia`,
-          },
+          // {
+          //   name: `Github`,
+          //   url: `https://github.com/tonycimaglia`,
+          // },
         ],
       },
     },
