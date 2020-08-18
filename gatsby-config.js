@@ -8,6 +8,7 @@ module.exports = {
   siteMetadata: {
     siteTitle: `Tony Cimaglia`,
     siteTitleAlt: `Tony Cimaglia`,
+    description: `Software engineer writing accessible tutorials for devs.`,
     siteDescription: `Software engineer writing accessible tutorials for devs.`,
     siteImage: `/banner.jpg`,
     siteUrl: `https://www.tonycimaglia.com/`,
