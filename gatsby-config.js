@@ -32,11 +32,7 @@ module.exports = {
           {
             name: `Twitter`,
             url: `https://twitter.com/tonycimaglia`,
-          },
-          // {
-          //   name: `Github`,
-          //   url: `https://github.com/tonycimaglia`,
-          // },
+          }
         ],
       },
     },
@@ -79,6 +75,12 @@ module.exports = {
         analyzerMode: `static`,
         reportFilename: `_bundle.html`,
         openAnalyzer: false,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.tonycimaglia.com/`,
       },
     },
   ].filter(Boolean),
