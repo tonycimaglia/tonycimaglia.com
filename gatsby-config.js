@@ -34,6 +34,7 @@ module.exports = {
             url: `https://twitter.com/tonycimaglia`,
           }
         ],
+        formatString: `MM.DD.YY`,
       },
     },
     {
