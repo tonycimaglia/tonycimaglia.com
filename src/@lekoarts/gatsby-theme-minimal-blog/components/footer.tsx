@@ -1,9 +1,9 @@
 /** @jsx jsx */
-import { jsx, Link } from "theme-ui"
-import useSiteMetadata from "../hooks/use-site-metadata"
+import {jsx, Link} from 'theme-ui'
+import useSiteMetadata from '../hooks/use-site-metadata'
 
 const Footer = () => {
-  const { siteTitle } = useSiteMetadata()
+  const {siteTitle} = useSiteMetadata()
 
   return (
     <footer
@@ -23,7 +23,7 @@ const Footer = () => {
       <div>
         &copy; {new Date().getFullYear()} by {siteTitle}. All rights reserved.
       </div>
-      <div>
+      {/* <div>
         <Link
           aria-label="Link to the theme's GitHub repository"
           href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-minimal-blog"
@@ -36,7 +36,7 @@ const Footer = () => {
         <Link aria-label="Link to the theme author's website" href="https://www.lekoarts.de/en">
           LekoArts
         </Link>
-      </div>
+      </div> */}
     </footer>
   )
 }
