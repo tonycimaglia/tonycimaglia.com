@@ -146,7 +146,7 @@ const code = {
       content: `'diff'`,
       background: `#e6ffed`,
     },
-    'pre[class~="language-clike"]:before': {
+    'pre[class~="cs_keywords"]:before': {
       content: `'cs'`,
       background: `#512CD4`,
       color: `black`,

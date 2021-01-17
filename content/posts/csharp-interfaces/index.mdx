@@ -12,11 +12,35 @@ not a polished article, but more of a living breathing breathing document. 🌱
 
 ## Interfaces
 
-So, what is an interface anyway?.
+We're not talking about user interfaces, so what is an interface anyway?
 
-Let's say we have a software product called Deco that is used by other
-businesses. One part of the application helps them handle customer relationship
-management (CRM). It only does a few things:
+Do you remember the Nintendo64? Different cartriges (games) could be popped into
+and out of any console. That's because there was a specification somewhere that
+layed out exactly how the two pieces connect together. Every single N64 cartrige
+and console in the world was designed and built according to those same
+specifications.
+
+how a class is used by another class
+
+benefits
+behavior from multiple source (can't inherit multiple classes in C#) must use an
+interface for a struct as well (can't inherit from classes / other structs) I
+convention
+
+```clike
+interface IBasicCalculator {
+  int Add(int firstNumber, int secondNumber);
+  int Subtract(int firstNumber, int secondNumber);
+}
+```
+
+the interface doesn't care how the numbers are added, just that there is an add / subtract method.
+
+
+Let's try to think about implementing an interface in a (fake) real life
+scenario. Say we have a software product called HappyCustomer that is used by
+other businesses. One portion of the application helps them handle customer
+relationship management (CRM). It only does a few things:
 
 - It searches for customers by name.
 - It finds the customer by their id.
@@ -39,7 +63,7 @@ And here's the CRM class:
 ```clike
 using System.Collections.Generic;
 
-public class DecoCRM
+public class HappyCustomerCRM
     {
       public List<Customer> Search(string searchText)
       {
