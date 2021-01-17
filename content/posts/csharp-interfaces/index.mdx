@@ -1,0 +1,37 @@
+---
+title: Angular Tutorial
+date: 2021-01-16
+slug: '/using-interfaces-in-csharp'
+tags:
+  - c#
+  - dotnet
+---
+
+🌱 This post is a part of my digital garden. It's a place where ideas grow. It's
+not a polished article, but more of a living breathing breathing document. 🌱
+
+not a user interface
+
+Lets say our software was used by multiple clients.
+Many of those clients use SalesForce for as a CRM (customer relationship management) tool.
+Others use our own internal CRM tool with the data stored in SQL.
+
+```clike
+public class Customer
+{
+ string Name {get set};
+ bool WithdrawFunds ( decimal amount );
+ decimal GetBalance ();
+}
+```
+
+```clike
+public interface ICRMProvider
+{
+ void PayInFunds ( decimal amount );
+ bool WithdrawFunds ( decimal amount );
+ decimal GetBalance ();
+}
+```
+
+
