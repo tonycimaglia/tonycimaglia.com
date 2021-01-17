@@ -1,5 +1,5 @@
 ---
-title: Understanding Interfaces In C#
+title: 🌱 Understanding Interfaces In C#
 date: 2021-01-16
 slug: '/understanding-interfaces-in-csharp'
 tags:
@@ -7,15 +7,22 @@ tags:
   - dotnet
 ---
 
-Let's say we have a software product that is used by other businesses. One part
-of the application helps them handle customer relationship management (CRM). It
-only does a few things:
+🌱 This post is a part of my digital garden. It's a place where ideas grow. It's
+not a polished article, but more of a living breathing breathing document. 🌱
+
+## Interfaces
+
+So, what is an interface anyway?.
+
+Let's say we have a software product called Deco that is used by other
+businesses. One part of the application helps them handle customer relationship
+management (CRM). It only does a few things:
 
 - It searches for customers by name.
 - It finds the customer by their id.
 - It has a method to update the customer's status.
 
-Here's the customer class that handles represents record in the table :
+Here's the customer class that represents each record in the table :
 
 ```clike
 public class Customer
@@ -32,7 +39,7 @@ And here's the CRM class:
 ```clike
 using System.Collections.Generic;
 
-public class InHouseCustomerFinder
+public class DecoCRM
     {
       public List<Customer> Search(string searchText)
       {
@@ -60,14 +67,17 @@ public class InHouseCustomerFinder
     }
 ```
 
-The Search method takes the search text that user inputs, finds the records that
-match the text in SQL, and returns a List of Customers that match the text. The
-GetById method takes a CustomerId, finds the record in SQL, and returns the
-customer. Easy.
+- The Search method takes the search text that user inputs, finds the records
+  that match the text in SQL, and returns a List of Customers that match the
+  text.
+- The GetById method takes a CustomerId, finds the record in SQL, and returns
+  the customer. Easy.
+- The UpdateStatus method takes in the customerId and the newStatus, updates the
+  record in the table, and returns the updated Customer.
 
-We've never had a reason to change this code, but we have a problem. We have a
-new client who already uses Salesforce to handle customer relationship
-management. They want to use our product, but they will only do so if they can
-use their existing CRM.
+The compnay has never had a reason to change this code, but there's a problem.
+They're courting a new client who already uses Salesforce to handle customer
+relationship management. They want to use Deco's software, but they will only do
+so if they can use their existing CRM.
 
-We could make a new
+They could create a brand new class with it's own methods
