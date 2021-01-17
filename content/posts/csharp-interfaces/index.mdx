@@ -1,37 +1,73 @@
 ---
-title: Angular Tutorial
+title: Understanding Interfaces In C#
 date: 2021-01-16
-slug: '/using-interfaces-in-csharp'
+slug: '/understanding-interfaces-in-csharp'
 tags:
   - c#
   - dotnet
 ---
 
-🌱 This post is a part of my digital garden. It's a place where ideas grow. It's
-not a polished article, but more of a living breathing breathing document. 🌱
+Let's say we have a software product that is used by other businesses. One part
+of the application helps them handle customer relationship management (CRM). It
+only does a few things:
 
-not a user interface
+- It searches for customers by name.
+- It finds the customer by their id.
+- It has a method to update the customer's status.
 
-Lets say our software was used by multiple clients.
-Many of those clients use SalesForce for as a CRM (customer relationship management) tool.
-Others use our own internal CRM tool with the data stored in SQL.
+Here's the customer class that handles represents record in the table :
 
 ```clike
 public class Customer
 {
- string Name {get set};
- bool WithdrawFunds ( decimal amount );
- decimal GetBalance ();
+  public int CustomerId;
+  public string FirstName;
+  public string LastName;
+  public string CustomerStatus;
 }
 ```
+
+And here's the CRM class:
 
 ```clike
-public interface ICRMProvider
-{
- void PayInFunds ( decimal amount );
- bool WithdrawFunds ( decimal amount );
- decimal GetBalance ();
-}
+using System.Collections.Generic;
+
+public class InHouseCustomerFinder
+    {
+      public List<Customer> Search(string searchText)
+      {
+        List<Customer> SearchResults = new List<Customer>();
+        SQLService Service = new SQLService();
+        SearchResults = Service.SearchCustomers(searchText);
+        return SearchResults;
+      }
+
+      public Customer GetById(int customerId)
+      {
+        Customer Customer = new Customer();
+        SQLService Service = new SQLService();
+        Customer = Service.GetCustomerById(customerId);
+        return Customer;
+      }
+
+      public Customer UpdateStatus(int customerId, string newStatus)
+      {
+        Customer UpdatedCustomer = new Customer();
+        SQLService Service = new SQLService();
+        Customer = Service.UpdateCustomerStatus(customerId, newStatus);
+        return Customer;
+      }
+    }
 ```
 
+The Search method takes the search text that user inputs, finds the records that
+match the text in SQL, and returns a List of Customers that match the text. The
+GetById method takes a CustomerId, finds the record in SQL, and returns the
+customer. Easy.
 
+We've never had a reason to change this code, but we have a problem. We have a
+new client who already uses Salesforce to handle customer relationship
+management. They want to use our product, but they will only do so if they can
+use their existing CRM.
+
+We could make a new
