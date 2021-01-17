@@ -146,6 +146,11 @@ const code = {
       content: `'diff'`,
       background: `#e6ffed`,
     },
+    'pre[class~="language-clike"]:before': {
+      content: `'cs'`,
+      background: `#512CD4`,
+      color: `black`,
+    },
   },
   '.gatsby-highlight > code[class*="language-"], .gatsby-highlight > pre[class=*="language-"]': {
     wordSpacing: `normal`,

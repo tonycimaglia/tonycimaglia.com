@@ -84,5 +84,28 @@ module.exports = {
         siteUrl: `https://www.tonycimaglia.com/`,
       },
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              languageExtensions: [
+                {
+                  language: "cs",
+                  extend: "clike",
+                  insertBefore: {
+                    function: {
+                      cs_keywords: /clike/,
+                    },
+                  }
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
   ].filter(Boolean),
 }
