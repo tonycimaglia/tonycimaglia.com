@@ -5,7 +5,6 @@ export type Language =
   | "bash"
   | "clike"
   | "c"
-  | "cs"
   | "cpp"
   | "css"
   | "javascript"
