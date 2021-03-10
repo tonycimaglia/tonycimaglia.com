@@ -17,12 +17,15 @@ Protocols / Specifications
 - OData
 - OAuth 2.0
 - Open API / Swagger
+- TLS vs SSL
 
 SQL
 - TSQL
 - Design / Development of Tables
 - Functions
 - Indexes
+- Constraints
+- Triggers
 
 Azure
  - Service Bus
@@ -36,5 +39,17 @@ Azure
 Visual Studio?
  - IIS
 
- Scrum / Agile
+Git
+ - Squash Merge
+
+.NET
+ - Microsoft OData
+ - .NET Core
+ - Entity framework
+
+Uncategorized
+ - Swagger
+ - Swashbuckler
+
+Scrum / Agile
 
