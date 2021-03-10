@@ -50,6 +50,7 @@ Git
  - Microsoft OData
  - .NET Core
  - Entity framework
+ - IsNullOrWhiteSpace vs IsNullOrEmpty
 
 Uncategorized
  - Swagger
