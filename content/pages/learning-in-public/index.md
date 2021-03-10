@@ -15,6 +15,7 @@ Protocols / Specifications
 - REST
 - SOAP
 - OData
+  - Expands
 - OAuth 2.0
 - Open API / Swagger
 - TLS vs SSL
@@ -35,12 +36,15 @@ Azure
  - Log Analytics
  - Dashboards
  - Metrics
+ - Event processing
+ - Artifacts
 
 Visual Studio?
  - IIS
 
 Git
  - Squash Merge
+ - Fetch vs. Pull
 
 .NET
  - Microsoft OData
